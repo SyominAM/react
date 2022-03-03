@@ -17,6 +17,13 @@ class App extends Component{
     })
   }
 
+  handleInput = (event) =>{
+    console.log("changed",event.target.value)
+    this.setState({
+      pageTitle: event.target.value
+    })
+  }
+
   render(){
     const divStyle = {
       'color': 'black',
@@ -28,7 +35,8 @@ class App extends Component{
       <div style = {divStyle}>
         <h1>{this.state.pageTitle}</h1>
         
-        
+        <input type = "text" onChange={this.handleInput} />
+
         <button onClick={this.changeTitleHandler.bind(this, ' changed')}>click!</button>
 
         <h1  style={{fontSize: '40px',margin: 'auto'}}>Hello, stranger!</h1>
