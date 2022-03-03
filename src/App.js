@@ -30,7 +30,6 @@ class App extends Component{
       'text-align':'center'
     }
 
-    const cars = this.state.cars
     return(
       <div style = {divStyle}>
         <h1>{this.state.pageTitle}</h1>
@@ -40,18 +39,17 @@ class App extends Component{
         <button onClick={this.changeTitleHandler.bind(this, ' changed')}>click!</button>
 
         <h1  style={{fontSize: '40px',margin: 'auto'}}>Hello, stranger!</h1>
-        <Car 
-          name = {cars[0].name} 
-          year = {cars[0].year}
-          onChangeTitle ={this.changeTitleHandler.bind(this, cars[0].name)}
-          
-          />
-        <Car 
-          name = {cars[1].name} 
-          year = {cars[1].year}
-          onChangeTitle = {()=>this.changeTitleHandler(cars[1].name)}
-          />
-          
+        
+        { this.state.cars.map((car, index) => {
+          return (
+            <Car
+              key={index}
+              name={car.name}
+              year={car.year}
+              onChangeTitle={() => this.changeTitleHandler(car.name)}
+            />
+          )
+        }) }
       </div>
     );
   }
