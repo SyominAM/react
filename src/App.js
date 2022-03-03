@@ -10,7 +10,7 @@ class App extends Component{
     return(
       <div style = {divStyle}>
         <h1  style={{fontSize: '220px',margin: 'auto'}}>Hello, stranger!</h1>
-        <Car/>
+        <Car name = {'BMW'} year = {2228} />
       </div>
     );
   }

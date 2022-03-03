@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-export default () =>(
+export default (props) =>(
     <div>
-        <p>This is <strong>new simple</strong> Component </p>
-        <p>Динамический объект {Math.random()+ 1}</p>
+        <h1>Car name: {props.name} </h1>
+        <h1>year:{props.year}  </h1>
     </div>
 )
