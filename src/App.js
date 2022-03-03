@@ -12,7 +12,11 @@ class App extends Component{
   
   
   changeTitleHandler = () => {
-    console.log('clicked')
+    let oldTitle = this.state.pageTitle
+    let newTitle = this.state.pageTitle + '  changed'
+    this.setState({
+      pageTitle: newTitle
+    })
   }
 
   render(){
@@ -26,7 +30,7 @@ class App extends Component{
       <div style = {divStyle}>
         <h1>{this.state.pageTitle}</h1>
         
-        <button onClick={this.changeTitleHandler}>change title</button>
+        <button onClick={this.changeTitleHandler}>click!</button>
 
         <h1  style={{fontSize: '40px',margin: 'auto'}}>Hello, stranger!</h1>
         <Car name = {cars[0].name} year = {cars[0].year}/>
