@@ -10,7 +10,11 @@ class App extends Component{
     pageTitle:'React components'
   }
   
- 
+  
+  changeTitleHandler = () => {
+    console.log('clicked')
+  }
+
   render(){
     const divStyle = {
       'color': 'orange',
@@ -21,7 +25,10 @@ class App extends Component{
     return(
       <div style = {divStyle}>
         <h1>{this.state.pageTitle}</h1>
-        <h1  style={{fontSize: '220px',margin: 'auto'}}>Hello, stranger!</h1>
+        
+        <button onClick={this.changeTitleHandler}>change title</button>
+
+        <h1  style={{fontSize: '40px',margin: 'auto'}}>Hello, stranger!</h1>
         <Car name = {cars[0].name} year = {cars[0].year}/>
         <Car name = {cars[1].name} year = {cars[1].year}/>
       </div>
