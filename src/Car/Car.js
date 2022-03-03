@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-function Car(){
-    return(
-        <h1>This is new Func</h1>
-    )
-}
 
-export default Car
+export default () =>(
+    <div>
+        <p>This is <strong>new simple</strong> Component </p>
+        <p>Динамический объект {Math.random()+ 1}</p>
+    </div>
+)
