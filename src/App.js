@@ -3,19 +3,15 @@ import React, {Component} from 'react';
 
 class App extends Component{
   render(){
-
-  return React.createElement(
-    'div',
-    {
-      className: 'App'
-    },
-    React.createElement(
-      'h1',
-      null,
-      'Hello'
-    )
-   
-  )
+    const divStyle = {
+      'color': 'orange',
+      'text-align':'center'
+    }
+    return(
+      <div style = {divStyle}>
+        <h1  style={{fontSize: '220px',margin: 'auto'}}>Hello, stranger!</h1>
+      </div>
+    );
   }
   
 }
